@@ -4,6 +4,8 @@
 // This is the better solution is to compare the ASCII values of the two strings
 // If they are palindromes, they will have the same character thus the same ASCII Values
 
+// O(1) Space
+// O(n) Time
 public boolean isPermutation(String A, String B)
 {
 	int value = 0;
