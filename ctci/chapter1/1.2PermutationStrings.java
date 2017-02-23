@@ -1,5 +1,34 @@
 // check if a string is a permutation of another
 
+// Better Solution 
+// This is the better solution is to compare the ASCII values of the two strings
+// If they are palindromes, they will have the same character thus the same ASCII Values
+
+public boolean isPermutation(String A, String B)
+{
+	int value = 0;
+	if(A.length != B.length)
+	{
+		return false;
+	}
+
+	for(int i = 0; i < A.length; i++)
+	{
+		value += A.charAt(i);
+	}
+	for(int i = 0; i < B.length; i++)
+	{
+		value -= B.charAt(i);
+	}
+
+	return value == 0;
+}
+
+
+// First Solution
+
+// O(n) Space 
+// O(n) Time
 public boolean isPermutation(String A, String B)
 {
 	if(A.length != B.length)
