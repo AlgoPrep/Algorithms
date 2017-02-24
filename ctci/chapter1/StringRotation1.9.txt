@@ -1,0 +1,17 @@
+StringRotation1.9
+
+// In order to find if one string is a rotation of another, the trick is to concat the same string twice, and check
+// if the other string is a substring of the concatentated one
+
+EX) tree
+	eetr
+
+	eetreetr
+
+	eetreetr has tree which is the first string
+	
+public boolean isRotation(String a, String b)
+{
+	b = b + b;
+	return b.substring(a);
+}
